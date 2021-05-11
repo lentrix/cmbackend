@@ -11,4 +11,7 @@ class Store extends Model
 
     protected $fillable = ['name','proprietor','address','phone'];
 
+    public function sellers() {
+        return $this->hasMany('App\Models\Seller');
+    }
 }
